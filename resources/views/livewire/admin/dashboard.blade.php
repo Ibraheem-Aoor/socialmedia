@@ -28,7 +28,28 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-green"><i class="fa fa-cubes"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text" style="font-size: larger; font-weight:900">عدد الطلبات حتى الان</span>
+                                <span class="info-box-number">{{$numberOrders}}</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-green"><i class="fa fa-clipboard"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text " tyle="font-size: larger; font-weight:900">عدد المنصات حتى الان</span>
+                                <span class="info-box-number">{{$numberOfPlatforms}}</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    {{-- <div class="col-lg-6">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title mb-2 text-bold">عنوان البطاقة</h5>
@@ -100,7 +121,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /.col-md-6 -->
+                    <!-- /.col-md-6 --> --}}
                 </div>
                 <!-- /.row -->
             </div>
