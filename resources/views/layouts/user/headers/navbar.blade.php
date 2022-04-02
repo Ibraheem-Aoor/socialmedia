@@ -1,4 +1,7 @@
 <!-- Navbar & Hero Start -->
+@php
+    $content = App\Models\Admin\Content::first();
+@endphp
 <div class="container-xxl position-relative p-0 mb-0" id="home">
     <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
         <a href="{{route('home')}}" class="navbar-brand p-0">
@@ -18,14 +21,8 @@
         <div class="container px-lg-5">
             <div class="row g-5">
                 <div class="col-lg-8 text-center text-lg-start">
-                    <h1 class="text-white mb-4 animated slideInDown">The Revolutionary Website That Helps To increase
-                        your
-                        Crowd</h1>
-                    <p class="text-white pb-3 animated slideInDown">Tempor rebum no at dolore lorem clita rebum rebum
-                        ipsum
-                        rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet
-                        ipsum vero
-                        ipsum clita lorem</p>
+                    <h1 class="text-white mb-4 animated slideInDown">{{$content->intro_text}}</h1>
+                    <p class="text-white pb-3 animated slideInDown">{{$content->intro_text_paragraph}}</p>
                     <a href="#proccess"
                         class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Read More</a>
                 </div>

@@ -24,6 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- template rtl version -->
     <link rel="stylesheet" href="{{ asset('assets/dist/adminlte/css/custom-style.css') }}">
     @stack('css')
+    @notifyCss
     @livewireStyles
 </head>
 
@@ -47,6 +48,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{asset('assets/dist/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('assets/dist/adminlte/js/adminlte.min.js')}}"></script>
+    @notifyJs
+    <x:notify-messages />
+
     @stack('js')
 </body>
 

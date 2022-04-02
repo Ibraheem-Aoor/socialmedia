@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\User\Home;
 use App\Http\Livewire\User\Views\Choices;
+use App\Http\Livewire\User\Views\MakeOrder;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -20,7 +21,8 @@ Route::get('/', function()
     return redirect(route('home'));
 });
 Route::get('/home', Home::class)->name('home');
-Route::get('/choices', Choices::class)->name('choices');
+Route::get('/choices/{id}', Choices::class)->name('choices');
+Route::get('/make-order', MakeOrder::class)->name('order.make');
 
 
 Auth::routes();

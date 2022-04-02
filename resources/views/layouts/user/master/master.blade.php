@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('assets/dist_2/css/style.css') }}" rel="stylesheet">
+    @notifyCss
     @livewireStyles
 </head>
 
@@ -65,6 +66,9 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('assets/dist_2/js/main.js') }}"></script>
+    @notifyJs
+    <x:notify-messages />
+
 </body>
 
 </html>

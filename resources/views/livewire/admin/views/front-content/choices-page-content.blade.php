@@ -29,6 +29,13 @@
                 <div class="row">
                     {{-- homepage content --}}
                     <div class="col-lg-12">
+                        @if (Session::has('success'))
+                            <div class="alert alert-success alert-dismissible">
+                                <button type="button" class="close" data-dismiss="alert"
+                                    aria-hidden="true">×</button>
+                                <h4><i class="icon fa fa-check"></i>تم الحفظ بنجاح</h4>
+                            </div>
+                        @endif
                         <div class="card card-primary card-outline">
                             <div class="card-header">
                                 <h5 class="m-0">محتوى صفحة الخيارات</h5>
@@ -38,11 +45,19 @@
                                 <h6 class="m-0 btn-lg btn-info text-center">الخيار الاولى</h6>
                                 <div class="form-group">
                                     <label>العنوان:</label>
-                                    <input type="text" class="form-control" placeholder="اكتب ...">
+                                    <input type="text" class="form-control" placeholder="اكتب ..."
+                                        wire:model.lazy="choices_1_headline">
+                                    @error('choices_1_headline')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>النص</label>
-                                    <input type="text" class="form-control" placeholder="اكتب ...">
+                                    <input type="text" class="form-control" placeholder="اكتب ..."
+                                        wire:model.lazy="choices_1_paragraph">
+                                    @error('choices_1_paragraph')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 </p>
 
@@ -51,11 +66,19 @@
                                 <h6 class="m-0 btn-lg btn-info text-center">الخيار الثاني</h6>
                                 <div class="form-group">
                                     <label>العنوان:</label>
-                                    <input type="text" class="form-control" placeholder="اكتب ...">
+                                    <input type="text" class="form-control" placeholder="اكتب ..."
+                                        wire:model.lazy="choices_2_headline">
+                                    @error('choices_2_headlie')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>النص</label>
-                                    <input type="text" class="form-control" placeholder="اكتب ...">
+                                    <input type="text" class="form-control" placeholder="اكتب ..."
+                                        wire:model.lazy="choices_2_paragraph">
+                                    @error('choices_2_paragraph')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 </p>
 
@@ -64,13 +87,23 @@
                                 <h6 class="m-0 btn-lg btn-info text-center">الخيار الثالث</h6>
                                 <div class="form-group">
                                     <label>العنوان:</label>
-                                    <input type="text" class="form-control" placeholder="اكتب ...">
+                                    <input type="text" class="form-control" placeholder="اكتب ..."
+                                        wire:model.lazy="choices_3_headline">
+                                    @error('choices_3_headline')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>النص</label>
-                                    <input type="text" class="form-control" placeholder="اكتب ...">
+                                    <input type="text" class="form-control" placeholder="اكتب ..."
+                                        wire:model.lazy="choices_3_paragraph">
+                                    @error('choices_3_paragraph')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+
                                 </div>
                                 </p>
+                                <a href="#" class="btn btn-primary" wire:click.prevent="save">حفظ</a>
 
                             </div>
                         </div>

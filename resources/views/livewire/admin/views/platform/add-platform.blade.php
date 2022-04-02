@@ -29,26 +29,46 @@
                 <div class="row">
                     {{-- homepage content --}}
                     <div class="col-lg-12">
+                        @if (Session::has('success'))
+                            <div class="alert alert-success alert-dismissible">
+                                <button type="button" class="close" data-dismiss="alert"
+                                    aria-hidden="true">×</button>
+                                <h4><i class="icon fa fa-check"></i>تم الحفظ بنجاح</h4>
+                            </div>
+                        @endif
                         <div class="card card-primary card-outline">
                             {{-- <div class="card-header">
                                 <h5 class="m-0">محتوى مقدمة الصفحة الرئيسية</h5>
                             </div> --}}
                             <div class="card-body">
-                                <h6 class="card-title mb-2 text-bold">
-                                    تغيير محتوى مقدمة الصفحة الرئيسية (النبذة التعريفية عن الموقع)
-                                </h6>
-
                                 <p class="card-text">
                                 <div class="form-group">
-                                    <label>النص الأول</label>
-                                    <textarea class="form-control" rows="5" placeholder="اكتب ..." style="resize:none;"></textarea>
+                                    <label>اختر المنصة:</label>
+                                    <select name="" id="" class="form-control" wire:model="name">
+                                        <option value="Facebook">Facebook</option>
+                                        <option value="Instagram">Instagram</option>
+                                        <option value="LinkedIn">LinkedIn</option>
+                                        <option value="Twitter">Twitter</option>
+                                        <option value="YouTube">YouTube</option>
+                                        <option value="SnapChat">SnapChat</option>
+                                        <option value="TikTok">TikTok</option>
+                                        <option value="Telegram">Telegram</option>
+                                    </select>
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label>النص الثاني</label>
-                                    <textarea class="form-control" rows="5" placeholder="اكتب ..." style="resize:none;"></textarea>
+                                    <label>ادخل الوصف:</label>
+                                    <textarea class="form-control" rows="5" placeholder="اكتب ..." style="resize:none;"
+                                        wire:model.lazy="description"></textarea>
+                                    @error('description')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 </p>
-                                <a href="#" class="btn btn-primary">انتقل إلى صفحة X</a>
+                                <a href="#" class="btn btn-primary" wire:click.prevent="save">إضافة</a>
+
                             </div>
                         </div>
                     </div>
@@ -61,4 +81,3 @@
         <!-- /.content -->
     </div>
 </div>
-
