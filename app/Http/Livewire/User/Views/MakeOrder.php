@@ -14,6 +14,8 @@ class MakeOrder extends Component
         $this->validate($this->rules());
         $platform_id = session()->has('platform_id') ? session()->get('platform_id') :null;
         $choice = session()->has('choice') ? session()->get('choice') : null;
+        session()->put('platform_id' , null);
+        session()->put('choice' , null);
         if($platform_id == null || $choice == null)
         {
             notify()->error('something went wrong');
