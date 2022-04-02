@@ -12,8 +12,13 @@ class MakeOrder extends Component
     public function makeOrder()
     {
         $this->validate($this->rules());
-        $platform_id = session()->has('platform_id') ? session()->get('platform_id') :'';
-        $choice = session()->has('choice') ? session()->get('choice') : '';
+        $platform_id = session()->has('platform_id') ? session()->get('platform_id') :null;
+        $choice = session()->has('choice') ? session()->get('choice') : null;
+        if($platform_id == null || $choice == null)
+        {
+            notify()->error('something went wrong');
+            return redirect()->back();
+        }
         Order::create([
             'url' => $this->url,
             'choice' => $choice ,
