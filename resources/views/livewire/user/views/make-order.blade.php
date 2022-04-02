@@ -18,6 +18,7 @@
                     <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
                         <h4 class="mt-4 mb-3" style="color:#000;">Enter Profile
                                 URL:</h3>
+                                <span style="color:lightgrat">You will receive your order within 24 hours!</span>
                             <p class="mb-0 details">
                             <form action="" wire:submit.prevent="makeOrder">
                                 <div class="form-group">

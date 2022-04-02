@@ -26,7 +26,7 @@ class MakeOrder extends Component
             'choice' => $choice ,
             'platform_id' => $platform_id,
         ]);
-        notify()->success('Thank You!');
+        notify()->success('Thank You , You will receive your order within 24 hours!');
         return redirect(route('home'));
     }
 
