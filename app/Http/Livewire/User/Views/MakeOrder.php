@@ -19,7 +19,7 @@ class MakeOrder extends Component
         if($platform_id == null || $choice == null)
         {
             notify()->error('something went wrong');
-            return redirect()->back();
+            return redirect(route('order.make'));
         }
         Order::create([
             'url' => $this->url,
