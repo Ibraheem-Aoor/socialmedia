@@ -21,6 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->boolean('is_admin')->default(false);
             $table->string('image')->default('avatar');
+            $table->boolean('is_owner')->default(false);
+            $table->boolean('status')->default(true)
+                ->comment('status => true => acitve ;
+                status => flase => inactive');
             $table->rememberToken();
             $table->timestamps();
         });

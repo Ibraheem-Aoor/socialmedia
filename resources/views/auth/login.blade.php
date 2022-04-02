@@ -1,17 +1,17 @@
 @extends('layouts.app')
 @section('content')
-    {{-- <div class="container">
+    <div class="container" >
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Admin Login') }}</div>
+                <div class="card" style="margin-top:100px;">
+                    <div class="card-header text-center" style="font-weight: 900"><i class="fa fa-lock"></i>  {{ __('لوحة تحكم المشرف') }}</div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
                             <div class="row mb-3">
                                 <label for="email"
-                                    class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                                    class="col-md-4 col-form-label text-md-end">{{ __('البريد الالكتروني') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
@@ -27,7 +27,7 @@
 
                             <div class="row mb-3">
                                 <label for="password"
-                                    class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                                    class="col-md-4 col-form-label text-md-end">{{ __('كلمة المرور') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
@@ -49,7 +49,7 @@
                                             {{ old('remember') ? 'checked' : '' }}>
 
                                         <label class="form-check-label" for="remember">
-                                            {{ __('Remember Me') }}
+                                            {{ __('تذكرني') }}
                                         </label>
                                     </div>
                                 </div>
@@ -58,14 +58,14 @@
                             <div class="row mb-0">
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Login') }}
+                                        {{ __('دخول') }}
                                     </button>
-
+{{--
                                     @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
-                                    @endif
+                                    @endif --}}
                                 </div>
                             </div>
                         </form>
@@ -73,47 +73,6 @@
                 </div>
             </div>
         </div>
-    </div> --}}
-
-    <div class="login-box">
-        <div class="login-logo">
-            <a href=""><b>Admin</b>LTE</a>
-        </div>
-
-        <div class="login-box-body">
-            <p class="login-box-msg">Sign in to start your session</p>
-            <form action="{{route('login')}}" method="post">
-                <div class="form-group has-feedback">
-                    <input type="email" class="form-control" placeholder="Email" value="{{ old('email') }}" required
-                        autocomplete="email" autofocus>
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="Password"
-                    @error('password') is-invalid @enderror name="password"
-                    required autocomplete="current-password">
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="checkbox icheck">
-                            <label>
-                                <input type="checkbox" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <button type="#" class="btn btn-primary btn-block btn-flat">Sign In</button>
-                    </div>
-                </div>
-            </form>
-            <a href="#">I forgot my password</a><br>
-        </div>
-
     </div>
+
 @endsection

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Livewire\Admin\Dashboard;
+use App\Http\Livewire\Admin\Views\Admins\AddAdmin;
+use App\Http\Livewire\Admin\Views\Admins\AllAdmins;
 use App\Http\Livewire\Admin\Views\Platform\AddPlatform;
 use App\Http\Livewire\Admin\Views\FrontContent\ChoicesPageContent;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +17,9 @@ use App\Http\Livewire\Admin\Views\Platform\ShowPlatform;
 use App\Http\Livewire\Admin\Views\Platform\SelectPlatform;
 
 // prefix => admin
+Route::group(['middleware' => ['auth' , 'auth.admin']] , function()
+{
+
 Route::get('/dashboard', Dashboard::class)->name('admin.dashboard');
 // Content
 Route::get('/home-page/content', HomePageContentShow::class)->name('admin.homepage.intro.content.show');
@@ -36,3 +41,13 @@ Route::get('/all-platforms', SelectPlatform::class)->name('admin.platform.select
 Route::get('/orders/{id}', PlatformOrders::class)->name('admin.platform.orders');
 
 
+// Profile
+Route::get('/profile', PlatformOrders::class)->name('admin.profile');
+
+// admins
+Route::get('/admins-all', AllAdmins::class)->name('admin.admins.show');
+Route::get('/admins-new', AddAdmin::class)->name('admin.admins.add');
+
+
+
+});

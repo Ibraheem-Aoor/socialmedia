@@ -27,7 +27,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @livewireStyles
 </head>
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-color: #d2d6de;">
     @yield('content')
     <!-- REQUIRED SCRIPTS -->
     @livewireScripts

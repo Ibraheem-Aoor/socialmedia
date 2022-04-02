@@ -18,7 +18,8 @@
 
                  </div>
                  <div class="info">
-                     <a href="#" class="d-block">{{ Auth::check() ? Auth::user()->name : 'Admin' }}</a>
+                     <a href="{{ route('admin.profile') }}"
+                         class="d-block">{{ Auth::check() ? Auth::user()->name : 'Admin' }}</a>
                  </div>
              </div>
 
@@ -136,7 +137,42 @@
                      </li>
                  </ul>
 
-
+                 @if (Auth::user()->is_owner)
+                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                         data-accordion="false">
+                         <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+                         <li class="nav-item has-treeview menu-open">
+                             <a href="#"
+                                 class="nav-link
+                     {{ ($routeName == 'admin.admins.show' ? 'active' : '' || $routeName == 'admin.admins.add') ? 'active' : '' }}">
+                                 <i class="nav-icon fa fa-dashboard"></i>
+                                 <p>
+                                     المشرفين
+                                     <i class="right fa fa-angle-left"></i>
+                                 </p>
+                             </a>
+                             <ul class="nav nav-treeview">
+                                 <li class="nav-item">
+                                     <a href="{{ route('admin.admins.show') }}"
+                                         class="nav-link {{ $routeName == 'admin.admins.show' ? 'active' : '' }}">
+                                         <i class="fa fa-circle-o nav-icon"></i>
+                                         <p>
+                                             عرض المشرفين
+                                         </p>
+                                     </a>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a href="{{ route('admin.admins.add') }}"
+                                         class="nav-link {{ $routeName == 'admin.admins.add' ? 'active' : '' }}">
+                                         <i class="fa fa-circle-o nav-icon"></i>
+                                         <p>
+                                             إضافة مشرف جديد
+                                         </p>
+                                     </a>
+                                 </li>
+                             </ul>
+                 @endif
              </nav>
              <!-- /.sidebar-menu -->
              <!-- Brand Logo -->

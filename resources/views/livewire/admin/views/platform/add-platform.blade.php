@@ -45,6 +45,7 @@
                                 <div class="form-group">
                                     <label>اختر المنصة:</label>
                                     <select name="" id="" class="form-control" wire:model="name">
+                                        <option value="" selected>اختر </option>
                                         <option value="Facebook">Facebook</option>
                                         <option value="Instagram">Instagram</option>
                                         <option value="LinkedIn">LinkedIn</option>
@@ -53,6 +54,8 @@
                                         <option value="SnapChat">SnapChat</option>
                                         <option value="TikTok">TikTok</option>
                                         <option value="Telegram">Telegram</option>
+                                        <option value="PUBG">PUBG</option>
+                                        <option value="FreeFire">FreeFire</option>
                                     </select>
                                     @error('name')
                                         <span class="text-danger">{{ $message }}</span>

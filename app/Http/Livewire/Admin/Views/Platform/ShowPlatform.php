@@ -23,7 +23,8 @@ class ShowPlatform extends Component
         $this->platform->name = $this->name;
         $this->platform->description = $this->description;
         $this->platform->save();
-        session()->flash('success' , 'تم تعديل المنصة بنجاح 😇');
+        notify()->success('success' , 'تم تعديل المنصة بنجاح 😇');
+        return redirect(route('admin.homepage.platforms.content.show'));
     }
     public function rules()
     {
@@ -36,7 +37,7 @@ class ShowPlatform extends Component
     public function deletePlatform()
     {
         $this->platform->delete();
-        session()->flash('success' , 'تم حذف المنصة بنجاح 😇');
+        notify()->success('success' , 'تم حذف المنصة بنجاح 😇');
         return redirect(route('admin.homepage.platforms.content.show'));
     }
     public function render()

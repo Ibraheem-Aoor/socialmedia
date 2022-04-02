@@ -19,7 +19,8 @@ use Livewire\Component;
             'name' => $this->name,
             'description' => $this->description,
         ]);
-        session()->flash('success' , 'تمت اضافة المنصة بنجاح 😇');
+        notify()->success('success' , 'تمت اضافة المنصة بنجاح 😇');
+        return redirect(route('admin.homepage.platforms.content.show'));
     }
     public function rules()
     {

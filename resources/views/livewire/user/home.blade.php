@@ -21,8 +21,8 @@
                     <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
                         <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
                             style="width: 100px; height: 100px;">
-                            <!-- <i class="far fa-ballot-check text-white"></i> -->
-                            <i class="fal fa-ballot-check"></i>
+                         {{-- <i class="far fa-ballot-check text-white"></i>  --}}
+                         <i class="fa fa-cog fa-3x text-white"></i>
                         </div>
                         <h5 class="mt-4 mb-3">{{ $content->proccess_section_card_1_headline }}</h5>
                         <p class="mb-0 details">

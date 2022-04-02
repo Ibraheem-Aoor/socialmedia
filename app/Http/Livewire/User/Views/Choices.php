@@ -26,7 +26,7 @@ class Choices extends Component
         session()->put('visited' , 1);
         return redirect($dist);
     }
-    public function render()
+        public function render()
     {
         $content = Content::first();
         return view('livewire.user.views.choices' , ['content' => $content])->extends('layouts.user.master.master');
