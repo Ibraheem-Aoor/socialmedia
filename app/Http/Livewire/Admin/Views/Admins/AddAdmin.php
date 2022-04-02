@@ -17,12 +17,12 @@ class AddAdmin extends Component
         {
             $this->validate($this->rules() , $this->messages());
             User::create([
-                'name' => $this->name,
-                'email' => $this->email,
-                'password' => Hash::make($this->password),
-                'is_admin' => true,
-                'is_owner' => false,
-                'status' => true,
+                    'name' => $this->name,
+                    'email' => $this->email,
+                    'password' => Hash::make($this->password),
+                    'is_admin' => true,
+                    'is_owner' => false,
+                    'status' => true,
 
             ]);
             notify()->success('success' , 'تمت اضافة المشرف بنجاح 😇');
@@ -33,7 +33,7 @@ class AddAdmin extends Component
         {
             return [
                 'name' => 'required|string|max:255',
-                'email' => 'required|email|unique:users,email,',
+                'email' => 'required|email|unique:users,email',
                 'password' => 'required|string|confirmed',
             ];
         }
