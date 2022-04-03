@@ -9,11 +9,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Order extends Model
 {
-    use HasFactory , SoftDeletes;
+    use HasFactory;
     protected $fillable = [
         'url',
         'platform_id',
-        'choice' ,
+        'choice',
     ];
 
     public function platform()
