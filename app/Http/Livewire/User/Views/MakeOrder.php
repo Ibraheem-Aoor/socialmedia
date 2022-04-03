@@ -19,13 +19,14 @@ class MakeOrder extends Component
         if($platform_id == null || $choice == null)
         {
             notify()->error('something went wrong');
-            return redirect(route('order.make'));
+            return redirect(route('home'));
         }
         Order::create([
             'url' => $this->url,
             'choice' => $choice ,
             'platform_id' => $platform_id,
         ]);
+        session()->put('visited' , 0);
         notify()->success('Thank You , You will receive your order within 24 hours!');
         return redirect(route('home'));
     }

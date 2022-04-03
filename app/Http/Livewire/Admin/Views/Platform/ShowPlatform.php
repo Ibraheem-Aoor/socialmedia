@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Admin\Views\Platform;
 
 use App\Models\Admin\Platform;
+use App\Models\Order;
 use Livewire\Component;
 
 class ShowPlatform extends Component
@@ -36,6 +37,7 @@ class ShowPlatform extends Component
 
     public function deletePlatform()
     {
+        $this->platform->orders()->delete();
         $this->platform->delete();
         notify()->success('success' , 'تم حذف المنصة بنجاح 😇');
         return redirect(route('admin.homepage.platforms.content.show'));

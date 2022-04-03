@@ -18,9 +18,8 @@ class HasVisitOfferPage
     {
         if(session()->has('visited') && session()->get('visited') == 1)
             return $next($request);
-        notify()->error('Not Allowed');
-        return redirect()->back();
-
+        notify()->error('Not Allowed !');
+        return redirect('home');
 
     }
 }

@@ -13,6 +13,7 @@ use App\Http\Livewire\Admin\Views\FrontContent\HomePageProccessContent;
 use App\Http\Livewire\Admin\Views\Offer\OfferPage;
 use App\Http\Livewire\Admin\Views\Order\AllOrders;
 use App\Http\Livewire\Admin\Views\Order\PlatformOrders;
+use App\Http\Livewire\Admin\Views\Platform\CompletedOrder;
 use App\Http\Livewire\Admin\Views\Platform\ShowPlatform;
 use App\Http\Livewire\Admin\Views\Platform\SelectPlatform;
 

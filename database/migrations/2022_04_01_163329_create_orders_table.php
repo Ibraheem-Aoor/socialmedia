@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->string('url');
             $table->string('choice');
             $table->unsignedBigInteger('platform_id')->constraint('platforms');
+            // $table->softDeletes();
             $table->timestamps();
         });
     }

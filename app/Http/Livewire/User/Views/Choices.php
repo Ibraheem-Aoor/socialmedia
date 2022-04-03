@@ -14,9 +14,10 @@ class Choices extends Component
     {
         $this->platform = Platform::findOrFail($id);
         session()->put('platform_id' , $this->platform->id);
-        session()->put('visited' , 0);
+        session()->put('visited' , 0); //hasn't visited the make order page yet.
     }
 
+    //redirect to offers page.
     public function goToPage($choice)
     {
         session()->put('choice' , $choice);

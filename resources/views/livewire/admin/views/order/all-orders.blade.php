@@ -33,7 +33,7 @@
                             <div class="alert alert-success alert-dismissible">
                                 <button type="button" class="close" data-dismiss="alert"
                                     aria-hidden="true">×</button>
-                                <h4><i class="icon fa fa-check"></i>تم الحفظ بنجاح</h4>
+                                <h4><i class="icon fa fa-check"></i>{{session()->get('success')}}</h4>
                             </div>
                         @endif
                         <div class="card card-primary card-outline">
@@ -53,6 +53,7 @@
                                             <th>الخدمة</th>
                                             <th>البروفايل</th>
                                             <th>تاريخ الطلب</th>
+                                            <th>عمليات</th>
                                         </thead>
                                         <tbody>
                                             @forelse($orders as $order)
@@ -62,10 +63,15 @@
                                                     <td>{{ $order->choice }}</td>
                                                     <td>{{ $order->url }}</td>
                                                     <td>{{ $order->created_at->diffForHumans() }}</td>
+                                                    <td>
+                                                        <a href="#" wire:click="delete({{$order->id}})">
+                                                            <i class="fa fa-trash" style="color:red"></i >حذف
+                                                        </a>
+                                                    </td>
                                                 </tr>
                                             @empty
                                                 <tr>
-                                                    <td colspan="5" class="alert alert-info text-center">لا يوجد طلبات حتى الان</td>
+                                                    <td colspan="6" class="alert alert-info text-center">لا يوجد طلبات حتى الان</td>
                                                 </tr>
                                             @endforelse
                                         </tbody>

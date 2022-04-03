@@ -16,7 +16,7 @@ class OfferSeeder extends Seeder
     {
         DB::table('offers')->insert(
             [
-                'page' => 'https://www.google.com/',
+                'page' => 'https://clickfam.com/cl/i/42gv1j',
             ]
             );
     }

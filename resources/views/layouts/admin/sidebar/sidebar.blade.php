@@ -36,7 +36,7 @@
                      <li class="nav-item has-treeview menu-open">
                          <a href="#"
                              class="nav-link
-                    {{ (($routeName == 'admin.orders'? 'active': '' || $routeName == 'admin.platform.select')? 'active': '' || $routeName == '')? 'active': 'admin.offer' }}">
+                    {{ (($routeName == 'admin.orders'? 'active': '' || $routeName == 'admin.platform.select')? 'active': '' || $routeName == '')? 'active': 'admin.offer'}}">
                              <i class="nav-icon fa fa-dashboard"></i>
                              <p>
                                  التحكم

@@ -23,7 +23,8 @@ Route::get('/', function()
 });
 Route::get('/home', Home::class)->name('home');
 Route::get('/choices/{id}', Choices::class)->name('choices');
-Route::get('/make-order', MakeOrder::class)->name('order.make');
+Route::get('/make-order', MakeOrder::class)->name('order.make')->middleware('visitofferpage');
+
 
 
 Auth::routes();
