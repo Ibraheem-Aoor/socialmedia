@@ -16,6 +16,8 @@ use App\Http\Livewire\Admin\Views\Order\PlatformOrders;
 use App\Http\Livewire\Admin\Views\Platform\CompletedOrder;
 use App\Http\Livewire\Admin\Views\Platform\ShowPlatform;
 use App\Http\Livewire\Admin\Views\Platform\SelectPlatform;
+use App\Http\Livewire\Admin\Views\Profile\Password;
+use App\Http\Livewire\Admin\Views\Profile\Profile;
 
 // prefix => admin
 Route::group(['middleware' => ['auth' , 'auth.admin']] , function()
@@ -43,12 +45,12 @@ Route::get('/orders/{id}', PlatformOrders::class)->name('admin.platform.orders')
 
 
 // Profile
-Route::get('/profile', PlatformOrders::class)->name('admin.profile');
+Route::get('/profile', Profile::class)->name('admin.profile');
+Route::get('/admin-password', Password::class)->name('admin.password.update');
 
 // admins
 Route::get('/admins-all', AllAdmins::class)->name('admin.admins.show');
 Route::get('/admins-new', AddAdmin::class)->name('admin.admins.add');
-
 
 
 });

@@ -6,13 +6,13 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark"> الملف الشخصي</h1>
+                        <h1 class="m-0 text-dark">كلمة المرور</h1>
                     </div>
                     <!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-left">
                             <li class="breadcrumb-item"><a href="/">الرئيسية</a></li>
-                            <li class="breadcrumb-item active">الملف الشخصي</li>
+                            <li class="breadcrumb-item active">كلمة المرور</li>
                         </ol>
                     </div>
                     <!-- /.col -->
@@ -40,31 +40,23 @@
                             {{-- <div class="card-header">
                                 <h5 class="m-0">محتوى مقدمة الصفحة الرئيسية</h5>
                             </div> --}}
-                            <form action="" wire:submit.prevent="UpdateProfile">
+                            <form action="" wire:submit.prevent="UpdatePassword">
                                 <div class="card-body">
                                     <p class="card-text">
                                     <div class="form-group">
-                                        <label> الاسم</label>
-                                        <input type="text" class="form-control" wire:model.lazy="name">
-                                        @error('name')
+                                        <label>كلمة المرور الجديدة</label>
+                                        <input type="password" class="form-control" wire:model.lazy="password">
+                                        @error('password')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label>البريد الالكتروني</label>
-                                        <input type="email" class="form-control" wire:model.lazy="email">
-                                        @error('email')
-                                            <span class="text-danger">{{ $message }}</span>
-                                        @enderror
+                                        <label> تأكيد كلمة المرور الجديدة</label>
+                                        <input type="password" class="form-control"
+                                            wire:model.lazy="password_confirmation">
                                     </div>
                                     </p>
-                                    <div class="container">
-                                        <div class="row">
-                                            <a href="#" class="btn btn-primary col-xs-8 ml-auto">حفظ</a>
-                                            <a href="{{ route('admin.password.update') }}"
-                                                class="btn btn-info  col-xs-2 mr-auto">تحديث كلمة المرور</a>
-                                        </div>
-                                    </div>
+                                    <button class="btn btn-primary">حفظ</button>
                                 </div>
                             </form>
                         </div>

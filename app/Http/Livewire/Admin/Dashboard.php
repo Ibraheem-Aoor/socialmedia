@@ -10,11 +10,11 @@ class Dashboard extends Component
 {
     public function render()
     {
-        $numberOfPlatforms = Platform::count();
+        $platforms = Platform::with('orders')->get();
         $numberOrders = Order::count();
         return view('livewire.admin.dashboard' ,
             [
-                'numberOfPlatforms' => $numberOfPlatforms,
+                'platforms' => $platforms,
                 'numberOrders' => $numberOrders,
             ]
         )->extends('layouts.admin.master.master')->section('content');

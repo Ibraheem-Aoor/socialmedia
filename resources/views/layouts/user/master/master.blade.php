@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <title>Title</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="instagram,youtube,facebook,telegram,twitter,pubg,freefire,snapchat,followers,likes,add followers,New Followers,likes,Likes,زيادة متابعين,
+    زيادةمتابعين انستغرام,زيادة متابعين يوتيوب,زيادة مشاهدات يوتيوب  ,زيادة لايكات,زيادة لايكات,زيادة لايكات يوتيوب,زيادة متابعين تويتر , زيادة متابعين تيك توك ,زيادة مشاهدات انستغرام , زيادة نقاط ببجي , زيادة نقاط فري فاير " name="keywords">
+    <meta content="Increase followers , views and likes on socail media platforms with few steps!!" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 
