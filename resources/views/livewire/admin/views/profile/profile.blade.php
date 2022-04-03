@@ -58,10 +58,10 @@
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
+                                    <button type="submit" class="btn btn-primary">حفظ</button>
                                     </p>
                                     <div class="container">
                                         <div class="row">
-                                            <button type="submit" class="btn btn-primary">حفظ</button>
                                             <a href="{{ route('admin.password.update') }}"
                                                 class="btn btn-info  col-xs-2 mr-auto">تحديث كلمة المرور</a>
                                         </div>
