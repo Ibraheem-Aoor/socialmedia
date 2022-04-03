@@ -1,18 +1,18 @@
 <div>
-    @section('title', 'محتوى الصفحة الرئيسية')
+    @section('title', ' كل الطلبات')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0 text-dark"> رابط العروض</h1>
+                        <h1 class="m-0 text-dark"> كل  الطلبات</h1>
                     </div>
                     <!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-left">
-                            <li class="breadcrumb-item"><a href="/">الرئيسية</a></li>
-                            <li class="breadcrumb-item active">رابط العروض</li>
+                            <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">الرئيسية</a></li>
+                            <li class="breadcrumb-item active">كل الطلبات</li>
                         </ol>
                     </div>
                     <!-- /.col -->
@@ -38,7 +38,7 @@
                         @endif
                         <div class="card card-primary card-outline">
                             {{-- <div class="card-header">
-                                <h5 class="m-0">محتوى مقدمة الصفحة الرئيسية</h5>
+                            <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">الرئيسية</a></li>
                             </div> --}}
                             <div class="card-body">
                                 <div class="table-responsive">

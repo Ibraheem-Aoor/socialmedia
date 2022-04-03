@@ -11,7 +11,8 @@
                     <!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-left">
-                            <li class="breadcrumb-item"><a href="/">الرئيسية</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">الرئيسية</a></li>
+
                             <li class="breadcrumb-item active">محتوى الصفحة الرئيسية</li>
                         </ol>
                     </div>

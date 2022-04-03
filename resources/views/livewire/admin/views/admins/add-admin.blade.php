@@ -1,5 +1,5 @@
 <div>
-    @section('title', 'محتوى الصفحة الرئيسية')
+    @section('title', 'إضافة مشرف جديد')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">

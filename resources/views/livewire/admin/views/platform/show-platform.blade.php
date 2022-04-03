@@ -1,5 +1,5 @@
 <div>
-    @section('title', 'محتوى الصفحة الرئيسية')
+    @section('title', ' المنصات')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
@@ -11,7 +11,7 @@
                     <!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-left">
-                            <li class="breadcrumb-item"><a href="/">الرئيسية</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">الرئيسية</a></li>
                             <li class="breadcrumb-item active">منصة جديدة</li>
                         </ol>
                     </div>
