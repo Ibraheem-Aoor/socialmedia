@@ -23,6 +23,7 @@
         </div>
         <!-- /.content-header -->
 
+
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
@@ -60,7 +61,7 @@
                                     </p>
                                     <div class="container">
                                         <div class="row">
-                                            <a href="#" class="btn btn-primary col-xs-8 ml-auto">حفظ</a>
+                                            <button class="btn btn-primary">حفظ</button>
                                             <a href="{{ route('admin.password.update') }}"
                                                 class="btn btn-info  col-xs-2 mr-auto">تحديث كلمة المرور</a>
                                         </div>
