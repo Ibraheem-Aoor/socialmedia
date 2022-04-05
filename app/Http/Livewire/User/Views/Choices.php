@@ -9,7 +9,7 @@ use Livewire\Component;
 
 class Choices extends Component
 {
-    public $platform;
+    public $platform , $choice;
     public function mount($id)
     {
         $this->platform = Platform::findOrFail($id);
@@ -17,10 +17,15 @@ class Choices extends Component
         session()->put('visited' , 0); //hasn't visited the make order page yet.
     }
 
-    //redirect to offers page.
-    public function goToPage($choice)
+
+    public function changeChoice($choice)
     {
-        session()->put('choice' , $choice);
+        $this->choice = $choice;
+    }
+    //redirect to offers page.
+    public function goToPage()
+    {
+        session()->put('choice' , $this->choice);
         $offer = Offer::first();
         $dist = $offer->page;
         $dist = (string)$dist;

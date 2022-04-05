@@ -24,9 +24,12 @@
                             style="width: 100px; height: 100px;">
                             <i class="far fa-thumbs-up fa-3x text-white"></i>
                         </div>
-                        <h4 class="mt-4 mb-3" style="color:#000;"><a href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        <h4 class="mt-4 mb-3" style="color:#000;"><a href="#" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"
+                                wire:click="changeChoice('{{ $content->choices_section_card_1_headline }}')"
                                 style="color:#000;">{{ $content->choices_section_card_1_headline }}</a></h3>
-                            <a href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                wire:click="changeChoice('{{ $content->choices_section_card_1_headline }}')">
                                 <p class="mb-0 details">{{ $content->choices_section_card_1_paragraph }}</p>
                             </a>
                     </div>
@@ -37,10 +40,13 @@
                             style="width: 100px; height: 100px;">
                             <i class="fas fa-users fa-3x text-white"></i>
                         </div>
-                        <h4 class="mt-4 mb-3" style="color:#000;"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        <h4 class="mt-4 mb-3" style="color:#000;"><a href="#" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"
+                                wire:click="changeChoice('{{ $content->choices_section_card_2_headline }}')"
                                 style="color:#000;">{{ $content->choices_section_card_2_headline }}</a>
                         </h4>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            wire:click="changeChoice('{{ $content->choices_section_card_2_headline }}')">
                             <p class="mb-0 details">{{ $content->choices_section_card_2_paragraph }}</p>
                         </a>
 
@@ -53,9 +59,12 @@
                             <i class="far fa-eye fa-3x text-white"></i>
 
                         </div>
-                        <h4 class="mt-4 mb-3" style="color:#000;"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        <h4 class="mt-4 mb-3" style="color:#000;"><a href="#" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"
+                                wire:click="changeChoice('{{ $content->choices_section_card_3_headline }}')"
                                 style="color:#000;">{{ $content->choices_section_card_3_headline }}</a></h4>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            wire:click="changeChoice('{{ $content->choices_section_card_3_headline }}')">
                             <p class="mb-0 details">{{ $content->choices_section_card_3_paragraph }}</p>
                         </a>
                     </div>
@@ -65,27 +74,29 @@
     </div>
     <!-- choices Start -->
     <!-- Button trigger modal -->
-{{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Launch demo modal
   </button> --}}
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Note</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        wire:ignore>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Note</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="color: #000;font-weight:600;">
+                    You are one step away from receiving your order, please complete 4 offers to get your order for
+                    free!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" wire:click.prevent="goToPage()">Continue</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body" style="color: #000;font-weight:600;">
-            You are one step away from receiving your order, please complete 4 offers to get your order for free!
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" wire:click.prevent="goToPage('{{ $content->choices_section_card_3_headline }}')">Continue</button>
-        </div>
-      </div>
     </div>
-  </div>
 
 
 
